@@ -489,7 +489,7 @@ async def cb_send_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 type=Poll.QUIZ,
                 correct_option_id=correct_idx,
                 explanation=explanation[:200] if explanation else None,
-                is_anonymous=False,  # Changed to False to see who answered
+                is_anonymous=True,  # Changed to False to see who answered
             )
             sent += 1
             logger.info(f"Poll #{i+1}/{total} sent successfully")
