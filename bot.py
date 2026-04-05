@@ -496,7 +496,7 @@ async def cb_send_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except Exception as e:
             logger.error(f"Poll #{i+1} error: {e}")
 
-        await asyncio.sleep(1)  # 1 second between polls
+        await asyncio.sleep(3)  # 1 second between polls
 
     # Final score prompt
     try:
